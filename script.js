@@ -17,16 +17,13 @@ const createFirstInnerDivElement = document.createElement("div");
 createNewOuterDivElement.appendChild(createFirstInnerDivElement);
 
 const createSecondInnerDivElement = document.createElement("div");
-// createFirstInnerDivElement.appendChild(createSecondInnerDivElement);
 
 createNewOuterDivElement.classList.add("div_outer_container", "flex-container");
-createFirstInnerDivElement.classList.add("div_first_inner_container");
-// createFirstInnerDivElement.classList.add("div_first_inner_container", "flex-container");
-createSecondInnerDivElement.classList.add("div_second_inner_container");
-// createSecondInnerDivElement.classList.add("div_second_inner_container", "flex-container");
+createFirstInnerDivElement.classList.add("div_first_inner_container", "flex-container");
+createSecondInnerDivElement.classList.add("div_second_inner_container", "flex-container");
 
 const createPElementToDisplayResult = document.createElement("p");
-createPElementToDisplayResult.classList.add("display_result");
+createPElementToDisplayResult.classList.add("display_result", "flex-container");
 
 const createPlusButton = document.createElement("button");
 const createMinusButton = document.createElement("button");
@@ -35,13 +32,11 @@ const createResetButton = document.createElement("button");
 createFirstInnerDivElement.appendChild(createPElementToDisplayResult);
 
 createFirstInnerDivElement.appendChild(createSecondInnerDivElement);
-// createSecondInnerDivElement.appendChild(createPElementToDisplayResult);
 createSecondInnerDivElement.appendChild(createPlusButton);
 createSecondInnerDivElement.appendChild(createMinusButton);
 createSecondInnerDivElement.appendChild(createResetButton);
 
 let displayValue = 0;
-// let finalResult = 0;
 
 createPElementToDisplayResult.textContent = `${displayValue}`;
 createPlusButton.textContent = "+";
