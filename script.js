@@ -37,6 +37,7 @@ createSecondInnerDivElement.appendChild(createMinusButton);
 createSecondInnerDivElement.appendChild(createResetButton);
 
 let displayValue = 0;
+const RESET_VALUE = 0;
 
 createPElementToDisplayResult.textContent = `${displayValue}`;
 createPlusButton.textContent = "+";
@@ -45,7 +46,11 @@ createResetButton.textContent = "Reset";
 
 const updateDisplayCountValue = () => createPElementToDisplayResult.textContent = displayValue;
 
-const resetDisplayCountValue = () => createPElementToDisplayResult.textContent = 0;
+const resetDisplayCountValue = () => {
+  createPElementToDisplayResult.textContent = RESET_VALUE;
+  displayValue = RESET_VALUE;
+  return displayValue;
+};
 
 // Example: Regular Function
 // function addCountValue(num) {
